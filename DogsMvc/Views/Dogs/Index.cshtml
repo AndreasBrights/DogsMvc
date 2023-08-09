@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@model DogsMvc.Models.Dog[]
+<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -10,22 +11,19 @@
 <body>
 	<main>
 		<h2>Dogs</h2>
-		<form action="/ShowDogs">
-			Add dog
-			<input type="text" name="Name">
-			<input type="text" name="Age">
-			<input type="text" name="Id">
-			<button>Add Dog to list</button>
-		</form>
-
 		<ul>
 			@foreach (var item in Model)
 			{
 				<li>
-						@item.Name
+					@item.Name
 				</li>
 			}
 		</ul>
+
+		<a href="/Create"> Lägg till hund</a>
+
+
+
 	</main>
 </body>
 </html>

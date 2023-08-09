@@ -15,19 +15,18 @@ namespace DogsMvc.Models
          
         };
 
-		public Dog AddDog(int id, string name, int age)
+		public void AddDog(Dog dog)
 			{
-				Dog newDog = new Dog { Id = id, Name = name, Age = age };
-				dogs.Add(newDog);
-				return newDog;
+				dogs.Add(dog);
+
 			}
 		public Dog[] GetAllDogs()
 		{
 			return dogs.ToArray();
 		}
-		public Dog[] GetDogById(int id)
+		public Dog GetDogById(int id)
 		{
-			return dogs.ToArray();
+			return dogs.SingleOrDefault(d => d.Id == id);
 		}
 
 	}

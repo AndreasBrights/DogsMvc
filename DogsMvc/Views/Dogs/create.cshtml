@@ -1,4 +1,4 @@
-﻿@model DogsMvc.Models.Dog[]
+﻿@model DogsMvc.Models.Dog
 <!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -10,14 +10,16 @@
 <body>
     <main>
     <h2>Dogs</h2>
-		<ul>
-			@foreach (var item in Model)
-			{
-				<li>
-					@item.Name
-				</li>
-			}
-		</ul>
+		<form action="/AddDog" method="post">
+			Add dog
+			Name
+			<input type="text" name="Name">
+			Age
+			<input type="text" name="Age">
+			ID
+			<input type="text" name="Id">
+			<button>Add Dog to list</button>
+		</form>
   </main>
 </body>
 </html>
