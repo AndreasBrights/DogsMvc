@@ -16,10 +16,11 @@ namespace DogsMvc.Models
         };
 
 		public Dog AddDog(int id, string name, int age)
-		{
-		
-			return dogs.Add();
-		}
+			{
+				Dog newDog = new Dog { Id = id, Name = name, Age = age };
+				dogs.Add(newDog);
+				return newDog;
+			}
 		public Dog[] GetAllDogs()
 		{
 			return dogs.ToArray();
