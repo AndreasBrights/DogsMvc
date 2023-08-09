@@ -12,16 +12,16 @@ namespace WebApplication1.Controllers
             dataService = new DataService();
         }
 
-        [HttpGet("")]
+        [HttpGet("/")]
         public IActionResult Index()
         {
-            var model = dataService.GetAllBands();
+            var model = dataService.GetAllDogs();
             return View(model);
         }
-        [HttpGet("details/{id}")]
+        [HttpGet("/{id}")]
         public IActionResult Details(int id)
         {
-            var model = dataService.GetBandById(id);
+            var model = dataService.GetDogById(id);
             return View(model);
         }
 

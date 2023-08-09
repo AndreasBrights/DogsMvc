@@ -4,27 +4,30 @@ namespace WebApplication1.Models
 {
     public class DataService
     {
-        List<Dogs> og = new List<Dogs>
+        List<Dogs> dog = new List<Dogs>
 		{
 
-         new Dogs {Id = 1, Name = "" },
-         new Dogs {Id = 2, Name = "" },
-		 new Dogs {Id = 3, Name = "" },
-         new Dogs {Id = 4, Name = "" },
-         new Dogs {Id = 5, Name = "" },
+         new Dogs {Id = 1, Name = "Golden Retriever" },
+         new Dogs {Id = 2, Name = "French Bulldog" },
+		 new Dogs {Id = 3, Name = "German Shepherd" },
+         new Dogs {Id = 4, Name = "Rottweiler" },
+         new Dogs {Id = 5, Name = "Beagle" },
          
         };
 
-        //public Dogs GetBandById(int id)
-        //{
-        //    return bands.SingleOrDefault(band => band.Id == id);
-                
-        //}
-        //public Dogs[] GetAllBands()
-        //{
-        //    return bands.ToArray();
-        //}
+		public Dogs AddDog(int id)
+		{
+			return dog.SingleOrDefault(dog => dog.Id == id);
 
-      
-    }
+		}
+		public Dogs[] GetAllDogs()
+		{
+			return dog.ToArray();
+		}
+		public Dogs[] GetDogById(int id)
+		{
+			return dog.ToArray();
+		}
+
+	}
 }
