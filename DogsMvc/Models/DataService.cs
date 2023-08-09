@@ -1,6 +1,6 @@
 ﻿using static System.Net.Mime.MediaTypeNames;
 
-namespace WebApplication1.Models
+namespace DogsMvc.Models
 {
     public class DataService
     {

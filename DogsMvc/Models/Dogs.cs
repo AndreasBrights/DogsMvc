@@ -1,4 +1,4 @@
-﻿namespace WebApplication1.Models
+﻿namespace DogsMvc.Models
 {
     public class Dogs
     {

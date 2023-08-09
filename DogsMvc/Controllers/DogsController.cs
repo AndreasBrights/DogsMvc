@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using WebApplication1.Models;
+using DogsMvc.Models;
 
-namespace WebApplication1.Controllers
+namespace DogsMvc.Controllers
 {
     public class DogsController : Controller
     {
