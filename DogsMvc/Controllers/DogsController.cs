@@ -5,11 +5,11 @@ namespace DogsMvc.Controllers
 {
     public class DogsController : Controller
     {
-        DataService dataService; //static 
+        static DataService dataService = new DataService(); 
 
         public DogsController()
         {
-            dataService = new DataService();
+            //dataService = new DataService();
         }
 
         [HttpGet("/")]
@@ -24,6 +24,20 @@ namespace DogsMvc.Controllers
             var model = dataService.GetDogById(id);
             return View(model);
         }
+	
 
-    }
+		[HttpPost("/ShowDogs")]
+		public IActionResult AddDogToArray(int id)
+		{
+			
+			return RedirectToAction("/AfterDogAdded");
+		}
+
+		[HttpGet("/AfterDogAdded")]
+		public IActionResult AfterDogAdded(Dog dog)
+		{
+			var model = dataService.AddDog(dog.Id, dog.Name, dog.Age);
+			return View(model);
+		}
+	}
 }

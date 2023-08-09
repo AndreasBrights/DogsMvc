@@ -1,6 +1,6 @@
 ﻿namespace DogsMvc.Models
 {
-    public class Dogs
+    public class Dog
     {
         public int Id { get; set; }
         public string Name { get; set; }

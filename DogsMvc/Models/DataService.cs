@@ -4,29 +4,29 @@ namespace DogsMvc.Models
 {
     public class DataService
     {
-        List<Dogs> dog = new List<Dogs>
+        List<Dog> dogs = new List<Dog>
 		{
 
-         new Dogs {Id = 1, Name = "Golden Retriever", Age = 10},
-         new Dogs {Id = 2, Name = "French Bulldog", Age = 5 },
-		 new Dogs {Id = 3, Name = "German Shepherd", Age = 2 },
-         new Dogs {Id = 4, Name = "Rottweiler", Age = 9 },
-         new Dogs {Id = 5, Name = "Beagle", Age = 4 },
+         new Dog {Id = 1, Name = "Golden Retriever", Age = 10},
+         new Dog {Id = 2, Name = "French Bulldog", Age = 5 },
+		 new Dog {Id = 3, Name = "German Shepherd", Age = 2 },
+         new Dog {Id = 4, Name = "Rottweiler", Age = 9 },
+         new Dog {Id = 5, Name = "Beagle", Age = 4 },
          
         };
 
-		public Dogs AddDog(int id)
+		public Dog AddDog(int id, string name, int age)
 		{
-			return dog.SingleOrDefault(dog => dog.Id == id);
-
+		
+			return dogs.Add();
 		}
-		public Dogs[] GetAllDogs()
+		public Dog[] GetAllDogs()
 		{
-			return dog.ToArray();
+			return dogs.ToArray();
 		}
-		public Dogs[] GetDogById(int id)
+		public Dog[] GetDogById(int id)
 		{
-			return dog.ToArray();
+			return dogs.ToArray();
 		}
 
 	}

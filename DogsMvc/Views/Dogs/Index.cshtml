@@ -10,10 +10,13 @@
 <body>
 	<main>
 		<h2>Dogs</h2>
-		<form>
+		<form action="/ShowDogs">
 			Add dog
-			<input type="text">
+			<input type="text" name="Name">
+			<input type="text" name="Age">
+			<input type="text" name="Id">
 		</form>
+
 		<ul>
 			@foreach (var item in Model)
 			{
