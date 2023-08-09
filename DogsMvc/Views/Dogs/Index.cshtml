@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<meta charset="utf-8" />
+	<title>Bands </title>
+	<link rel="stylesheet" href="https://unpkg.com/@@picocss/pico@@latest/css/pico.classless.min.css">
+</head>
+<body>
+	<main>
+		<h2>Dogs</h2>
+		<ul>
+			@foreach (var item in Model)
+			{
+				<li>
+					<a href="/details/@item.Id ">
+						@item.Name
+					</a>
+				</li>
+			}
+		</ul>
+	</main>
+</body>
+</html>
+
+
+
