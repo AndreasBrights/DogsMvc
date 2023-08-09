@@ -5,7 +5,7 @@ namespace DogsMvc.Controllers
 {
     public class DogsController : Controller
     {
-        DataService dataService;
+        DataService dataService; //static 
 
         public DogsController()
         {
